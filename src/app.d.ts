@@ -2,6 +2,11 @@
 // for information about these interfaces
 declare global {
 	namespace App {
+        interface Locals {
+            session?: {
+                userId: string;
+            };
+        }
         interface Platform {
             env: Env;
             cf: CfProperties;

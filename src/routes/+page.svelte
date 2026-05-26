@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import { getUser } from '../modules/user/data.remote';
+
+	const user = $derived(await getUser());
+</script>
+
+<main class="p-4">
+	<h1 class="text-fg-hard text-2xl">
+		Hello {user.displayName}!
+	</h1>
+</main>

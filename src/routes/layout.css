@@ -1,1 +1,40 @@
 @import 'tailwindcss';
+
+@import '../lib/styles/c-button.css' layer(components);
+@import '../lib/styles/c-input.css' layer(components);
+
+@theme {
+	--color-canvas: oklch(100% 0 0);
+	--color-surface: oklch(100% 0 0);
+	--color-surface-var: oklch(100% 0 0);
+	--color-surface-soft: oklch(100% 0 0);
+	--color-surface-hard: oklch(100% 0 0);
+
+	--color-fg: oklch(42% 0 0);
+	--color-fg-soft: oklch(52% 0 0);
+	--color-fg-hard: oklch(24% 0 0);
+	--color-fg-muted: oklch(68% 0 0);
+
+	--color-base: oklch(92% 0 0);
+	--color-base-soft: oklch(90% 0 0);
+	--color-base-hard: oklch(88% 0 0);
+	--color-base-border: oklch(86% 0 0);
+	--color-on-base: oklch(80% 0 0);
+
+	--color-primary: oklch(24% 0 0);
+	--color-primary-soft: oklch(30% 0 0);
+	--color-primary-hard: oklch(34% 0 0);
+	--color-primary-fg: oklch(0% 0 0);
+	--color-primary-border: oklch(20% 0 0);
+	--color-on-primary: oklch(100% 0 0);
+
+	--default-transition-duration: 75ms;
+}
+
+@layer base {
+	:root {
+		font-size: 16px;
+		color: var(--color-fg);
+		background-color: var(--color-canvas);
+	}
+}

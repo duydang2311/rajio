@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "rajio-workers",
+	"name": "rajio",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2026-05-25",
 	"compatibility_flags": [
@@ -18,7 +18,20 @@
 	"observability": {
 		"enabled": true
 	},
-	"upload_source_maps": true
+	"upload_source_maps": true,
+	"kv_namespaces": [
+		{
+			"binding": "APP_KV",
+			"id": "11ec7221c1dd4d3b8a4a6cae5a5a7c10"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "rajio-app-d1",
+			"database_id": "f1acd239-31a0-4c03-9892-41e1b374b201"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
