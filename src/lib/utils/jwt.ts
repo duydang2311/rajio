@@ -27,9 +27,13 @@ export async function verify(jwt: string) {
 export const authHandle: Handle = async ({ event, resolve }) => {
     const jwt = event.cookies.get('session_token');
     if (jwt) {
-        const result = await verify(jwt);
-        guardNull(result.payload.sub);
-        event.locals.session = { userId: result.payload.sub };
+        try {
+            const result = await verify(jwt);
+            guardNull(result.payload.sub);
+            event.locals.session = { userId: result.payload.sub };
+        } catch {
+            event.cookies.delete('session_token', { path: '/' });
+        }
     }
     return await resolve(event);
 };
