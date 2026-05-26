@@ -1,56 +1,56 @@
 .c-button {
-	/* defaults */
-	--_bg: transparent;
-	--_bg-hover: transparent;
-	--_bg-active: transparent;
+    /* defaults */
+    --_bg: transparent;
+    --_bg-hover: transparent;
+    --_bg-active: transparent;
 
-	--_text: inherit;
-	--_text-hover: inherit;
-	--_text-active: inherit;
+    --_text: inherit;
+    --_text-hover: inherit;
+    --_text-active: inherit;
 
-	--_border: transparent;
+    --_border: transparent;
 
-	@apply rounded-md border px-3 py-1 transition;
+    @apply rounded-md border px-3 py-1 transition;
 
-	background-color: var(--_bg);
-	color: var(--_text);
-	border-color: var(--_border);
+    background-color: var(--_bg);
+    color: var(--_text);
+    border-color: var(--_border);
 
-	&:hover {
-		background-color: var(--_bg-hover);
-		color: var(--_text-hover);
-	}
+    &:hover {
+        background-color: var(--_bg-hover);
+        color: var(--_text-hover);
+    }
 
-	&:active {
-		background-color: var(--_bg-active);
-		color: var(--_text-active);
-	}
+    &:active {
+        background-color: var(--_bg-active);
+        color: var(--_text-active);
+    }
 }
 
 .c-button--base {
-	--_bg: var(--color-base);
-	--_bg-hover: var(--color-base-soft);
-	--_bg-active: var(--color-base-hard);
+    --_bg: var(--color-base);
+    --_bg-hover: var(--color-base-soft);
+    --_bg-active: var(--color-base-hard);
 
-	--_text: var(--color-on-base);
-	--_text-hover: var(--color-on-base);
-	--_text-active: var(--color-on-base);
+    --_text: var(--color-on-base);
+    --_text-hover: var(--color-on-base);
+    --_text-active: var(--color-on-base);
 
-	&:where(.c-button--outlined) {
-		--_border: var(--color-base-border);
-	}
+    &:where(.c-button--outlined) {
+        --_border: var(--color-base-border);
+    }
 }
 
 .c-button--primary {
-	--_bg: var(--color-primary);
-	--_bg-hover: var(--color-primary-soft);
-	--_bg-active: var(--color-primary-hard);
+    --_bg: var(--color-primary);
+    --_bg-hover: var(--color-primary-soft);
+    --_bg-active: var(--color-primary-hard);
 
-	--_text: var(--color-on-primary);
-	--_text-hover: var(--color-on-primary);
-	--_text-active: var(--color-on-primary);
+    --_text: var(--color-on-primary);
+    --_text-hover: var(--color-on-primary);
+    --_text-active: var(--color-on-primary);
 
-	&:where(.c-button--outlined) {
-		--_border: var(--color-primary-border);
-	}
+    &:where(.c-button--outlined) {
+        --_border: var(--color-primary-border);
+    }
 }

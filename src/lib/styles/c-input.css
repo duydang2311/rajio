@@ -1,7 +1,7 @@
 .c-input {
-	@apply rounded-md border border-base-border px-2 py-1 transition;
+    @apply rounded-md border border-base-border px-2 py-1 transition;
 
-	&::placeholder {
-		@apply text-fg-muted;
-	}
+    &::placeholder {
+        @apply text-fg-muted;
+    }
 }
