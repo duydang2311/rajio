@@ -1,0 +1,17 @@
+{
+	"name": "backend-room",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@types/node": "^25.9.1",
+		"hono": "^4.12.23",
+		"typescript": "^6.0.3",
+		"wrangler": "^4.94.0"
+	}
+}
