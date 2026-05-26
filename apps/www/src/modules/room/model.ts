@@ -1,11 +1,11 @@
-export interface UserRow {
-    id: string;
+export interface RoomRow {
+    id: number;
     created_at: number;
     display_name: string;
 }
 
-export interface User {
+export interface Room {
     id: string;
     createdAt: number;
-    displayName: string;
+    ownerId: string;
 }

@@ -6,7 +6,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "cf-typegen": "turbo run cf-typegen"
   },
   "devDependencies": {
     "prettier": "^3.8.3",
