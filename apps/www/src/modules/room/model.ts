@@ -1,7 +1,7 @@
 export interface RoomRow {
     id: number;
+    owner_id: string;
     created_at: number;
-    display_name: string;
 }
 
 export interface Room {

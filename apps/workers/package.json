@@ -1,17 +1,19 @@
 {
-	"name": "backend-room",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"start": "wrangler dev",
-		"cf-typegen": "wrangler types"
-	},
-	"devDependencies": {
-		"@types/node": "^25.9.1",
-		"hono": "^4.12.23",
-		"typescript": "^6.0.3",
-		"wrangler": "^4.94.0"
-	}
+    "name": "backend-room",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "deploy": "wrangler deploy",
+        "dev": "wrangler dev --port 8788 --inspector-port 9788 --persist-to ../www/.wrangler/state",
+        "start": "wrangler dev",
+        "cf-typegen": "wrangler types"
+    },
+    "devDependencies": {
+        "@duydang2311/jsbelt": "^0.0.5",
+        "@repo/app": "workspace:*",
+        "@types/node": "^25.9.1",
+        "hono": "^4.12.23",
+        "typescript": "^6.0.3",
+        "wrangler": "^4.94.0"
+    }
 }

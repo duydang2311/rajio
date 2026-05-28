@@ -1,3 +1,4 @@
+import { decode } from '@repo/app';
 import { handler } from '../lib/handler';
 
 export const connectRoomWebSocket = handler<{ id: string }>(async (req, env, ctx, params) => {
@@ -8,6 +9,7 @@ export const connectRoomWebSocket = handler<{ id: string }>(async (req, env, ctx
         });
     }
 
-    const room = env.ROOMS.getByName(params.id);
+    const roomId = decode(env.NUMBER_CODEC_ALPHABET, params.id)
+    const room = env.ROOMS.getByName(roomId.toString());
     return await room.fetch(req);
 });

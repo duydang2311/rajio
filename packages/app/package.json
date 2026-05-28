@@ -1,0 +1,11 @@
+{
+  "name": "@repo/app",
+  "module": "index.ts",
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "type": "module",
+  "devDependencies": {
+    "sqids": "^0.3.0"
+  }
+}

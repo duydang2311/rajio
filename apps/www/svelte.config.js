@@ -16,6 +16,9 @@ const config = {
 		adapter: adapter(),
 		experimental: {
 			remoteFunctions: true
+		},
+		alias: {
+			'$modules': './src/modules'
 		}
 	}
 };

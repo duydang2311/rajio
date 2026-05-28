@@ -1,4 +1,12 @@
 import { authHandle } from '$lib/utils/jwt';
-import type { Handle } from '@sveltejs/kit';
+import { redirect, type Handle } from '@sveltejs/kit';
+import { sequence } from '@sveltejs/kit/hooks';
 
-export const handle: Handle = authHandle;
+const privateRouteHandle: Handle = ({ event, resolve }) => {
+    if (event.route.id?.includes('(private)') && !event.locals.session) {
+        return redirect(303, '/');
+    }
+    return resolve(event);
+};
+
+export const handle: Handle = sequence(authHandle, privateRouteHandle);

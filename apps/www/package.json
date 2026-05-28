@@ -16,7 +16,10 @@
 		"cf-typegen": "wrangler types ./src/worker-configuration.d.ts"
 	},
 	"devDependencies": {
+		"@repo/app": "workspace:*",
 		"@duydang2311/jsbelt": "^0.0.5",
+		"@duydang2311/sveltecraft": "^0.0.6",
+		"@duydang2311/svutils": "^0.0.10",
 		"@eslint/compat": "^2.1.0",
 		"@eslint/js": "^10.0.1",
 		"@repo/eslint-config": "workspace:*",
